@@ -10,7 +10,10 @@
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint:style": "stylelint \"**/*.{vue,css}\" --ignore-path .gitignore",
     "lint": "npm run lint:js && npm run lint:style",
-    "test": "jest"
+    "test": "jest",
+    "deploy-dev": "firebase use project_dev && firebase deploy",
+    "deploy-stg": "firebase use project_stg && firebase deploy",
+    "deploy-prod": "firebase use project_prod && firebase deploy && firebase use project_stg" 
   },
   "lint-staged": {
     "*.{js,vue}": "eslint",

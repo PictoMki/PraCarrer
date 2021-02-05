@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "pracarrer-dev"
+    "project_dev": "pracarrer-dev",
+    "project_prod": "pracareer-prod",
+    "project_stg": "pracareer-stg"
   }
 }
