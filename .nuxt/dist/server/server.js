@@ -496,7 +496,7 @@ if(content.locals) module.exports = content.locals;
 // add CSS to SSR context
 var add = __webpack_require__(6).default
 module.exports.__inject__ = function (context) {
-  add("6ac3c623", content, true, context)
+  add("6ac3c623", content, false, context)
 };
 
 /***/ }),
@@ -512,7 +512,7 @@ if(content.locals) module.exports = content.locals;
 // add CSS to SSR context
 var add = __webpack_require__(6).default
 module.exports.__inject__ = function (context) {
-  add("7e56e4e3", content, true, context)
+  add("7e56e4e3", content, false, context)
 };
 
 /***/ }),
@@ -528,7 +528,7 @@ if(content.locals) module.exports = content.locals;
 // add CSS to SSR context
 var add = __webpack_require__(6).default
 module.exports.__inject__ = function (context) {
-  add("56b15182", content, true, context)
+  add("56b15182", content, false, context)
 };
 
 /***/ }),
@@ -677,7 +677,7 @@ module.exports = exports;
 var content = __webpack_require__(25);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
-__webpack_require__(6).default("517a8dd7", content, true)
+__webpack_require__(6).default("517a8dd7", content, false)
 
 /***/ }),
 /* 25 */
@@ -767,9 +767,7 @@ function hasFetch(vm) {
   return vm.$options && typeof vm.$options.fetch === 'function' && !vm.$options.fetch.length;
 }
 function purifyData(data) {
-  if (true) {
-    return data;
-  }
+  if (false) {}
 
   return Object.entries(data).filter(([key, value]) => {
     const valid = !(value instanceof Function) && !(value instanceof Promise);
@@ -915,7 +913,16 @@ async function setContext(app, context) {
       payload: context.payload,
       error: context.error,
       base: '/',
-      env: {}
+      env: {
+        "NODE_ENV": "development",
+        "API_KEY": "AIzaSyArM0ASrbLwoYfG603pHUhre5WaqvFSUqI",
+        "AUTH_DOMAIN": "pracarrer-dev.firebaseapp.com",
+        "PROJECT_ID": "pracarrer-dev",
+        "STORAGE_BUCKET": "pracarrer-dev.appspot.com",
+        "MESSAGING_SENDER_ID": "1051623764576",
+        "APP_ID": "1:1051623764576:web:92c93468bec2d20e584905",
+        "MEASUREMENT_ID": "G-S793C2SMGE"
+      }
     }; // Only set once
 
     if (false) {}

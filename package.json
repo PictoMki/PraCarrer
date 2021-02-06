@@ -3,17 +3,24 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "nuxt",
+    "dev": "NODE_ENV=development nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
-    "generate": "nuxt generate",
+    "generate": "NODE_ENV=development nuxt generate",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint:style": "stylelint \"**/*.{vue,css}\" --ignore-path .gitignore",
     "lint": "npm run lint:js && npm run lint:style",
     "test": "jest",
+    "generate-stg" : "NODE_ENV=staging nuxt generate",
+    "generate-prod" : "NODE_ENV=production nuxt generate",
     "deploy-dev": "firebase use project_dev && firebase deploy",
     "deploy-stg": "firebase use project_stg && firebase deploy",
-    "deploy-prod": "firebase use project_prod && firebase deploy && firebase use project_stg" 
+    "deploy-prod": "firebase use project_prod && firebase deploy && firebase use project_stg",
+    "build-stg": "NODE_ENV=staging nuxt",
+    "build-prod": "NODE_ENV=production nuxt"
+  },
+  "rules": {
+    "no-console": "off"
   },
   "lint-staged": {
     "*.{js,vue}": "eslint",
@@ -28,6 +35,7 @@
   "dependencies": {
     "@nuxt/content": "^1.11.1",
     "@nuxtjs/axios": "^5.12.5",
+    "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/pwa": "^3.3.5",
     "core-js": "^3.8.3",
     "firebase": "^8.2.6",

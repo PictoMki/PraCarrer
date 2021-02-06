@@ -169,7 +169,7 @@ export async function setContext (app, context) {
       payload: context.payload,
       error: context.error,
       base: '/',
-      env: {}
+      env: {"NODE_ENV":"development","API_KEY":"AIzaSyArM0ASrbLwoYfG603pHUhre5WaqvFSUqI","AUTH_DOMAIN":"pracarrer-dev.firebaseapp.com","PROJECT_ID":"pracarrer-dev","STORAGE_BUCKET":"pracarrer-dev.appspot.com","MESSAGING_SENDER_ID":"1051623764576","APP_ID":"1:1051623764576:web:92c93468bec2d20e584905","MEASUREMENT_ID":"G-S793C2SMGE"}
     }
     // Only set once
     if (!process.static && context.req) {

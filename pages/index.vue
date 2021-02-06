@@ -25,8 +25,17 @@
   </div>
 </template>
 
+
 <script>
-export default {}
+export default {
+  data () {
+    console.log(process.env.PROJECT_ID)
+    console.log(process.env.NODE_ENV)
+    return {
+      msg: 'Hello world!'
+    }
+  }
+}
 </script>
 
 <style>

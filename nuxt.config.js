@@ -1,3 +1,6 @@
+const envPath = `configFile/.env.${process.env.NODE_ENV || 'development'}`
+require('dotenv').config({ path: envPath })
+
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -29,6 +32,8 @@ export default {
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
+    // firebase環境分け
+    '@nuxtjs/dotenv',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
@@ -52,4 +57,12 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
+
+  env: {
+    NODE_ENV: process.env.NODE_ENV
+  },
+
+  dotenv: {
+    filename: envPath
+  },
 }

@@ -13,7 +13,7 @@ if(content.locals) module.exports = content.locals;
 // add CSS to SSR context
 var add = __webpack_require__(6).default
 module.exports.__inject__ = function (context) {
-  add("1b7833da", content, true, context)
+  add("1b7833da", content, false, context)
 };
 
 /***/ }),
@@ -30,7 +30,7 @@ if(content.locals) module.exports = content.locals;
 // add CSS to SSR context
 var add = __webpack_require__(6).default
 module.exports.__inject__ = function (context) {
-  add("1930a9a0", content, true, context)
+  add("1930a9a0", content, false, context)
 };
 
 /***/ }),
@@ -138,12 +138,12 @@ var component = Object(componentNormalizer["a" /* default */])(
 // ESM COMPAT FLAG
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/index.vue?vue&type=template&id=24ee141f&
+// CONCATENATED MODULE: ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/index.vue?vue&type=template&id=1b456bbd&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"container"},[_vm._ssrNode("<div>","</div>",[_c('Logo'),_vm._ssrNode(" <h1 class=\"title\">PraCareer</h1> <div class=\"links\"><a href=\"https://nuxtjs.org/\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"button--green\">\n        Documentation\n      </a> <a href=\"https://github.com/nuxt/nuxt.js\" target=\"_blank\" rel=\"noopener noreferrer\" class=\"button--grey\">\n        GitHub\n      </a></div>")],2)])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./pages/index.vue?vue&type=template&id=24ee141f&
+// CONCATENATED MODULE: ./pages/index.vue?vue&type=template&id=1b456bbd&
 
 // CONCATENATED MODULE: ./node_modules/babel-loader/lib??ref--2-0!./node_modules/@nuxt/components/dist/loader.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./pages/index.vue?vue&type=script&lang=js&
 //
@@ -173,7 +173,17 @@ var staticRenderFns = []
 //
 //
 //
-/* harmony default export */ var lib_vue_loader_options_pagesvue_type_script_lang_js_ = ({});
+//
+/* harmony default export */ var lib_vue_loader_options_pagesvue_type_script_lang_js_ = ({
+  data() {
+    console.log("pracarrer-dev");
+    console.log("development");
+    return {
+      msg: 'Hello world!'
+    };
+  }
+
+});
 // CONCATENATED MODULE: ./pages/index.vue?vue&type=script&lang=js&
  /* harmony default export */ var pagesvue_type_script_lang_js_ = (lib_vue_loader_options_pagesvue_type_script_lang_js_); 
 // EXTERNAL MODULE: ./node_modules/vue-loader/lib/runtime/componentNormalizer.js
