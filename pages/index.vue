@@ -2,6 +2,7 @@
   <div class="container">
     <div>
       <Logo />
+      <button-outlined />
       <h1 class="title">PraCareer</h1>
       <div class="links">
         <a
@@ -27,7 +28,9 @@
 
 
 <script>
+import button_outlined from '../components/Atoms/button_outlined.vue'
 export default {
+  components: { button_outlined },
   data () {
     console.log(process.env.PROJECT_ID)
     console.log(process.env.NODE_ENV)
