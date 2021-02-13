@@ -1,7 +1,6 @@
 <template>
   <div class="container">
     <div>
-      <Logo />
       <h1 class="title">PraCareer</h1>
       <div class="links">
         <a
@@ -37,6 +36,7 @@ export default {
   data () {
     return {
       msg: 'Hello world!',
+      color: "red",
     }
   }
 }
