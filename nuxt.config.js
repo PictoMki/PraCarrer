@@ -66,6 +66,17 @@ export default {
   dotenv: {
     filename: envPath
   },
+
+  vuetify: {
+    theme: {
+      light: true,
+      themes: {
+        light: {
+          primary: '#E1E5A7',
+        }
+      }
+    }
+  },
 }
 
 /*
