@@ -4,12 +4,14 @@
   <div>
     <nuxt />
   </div>
+  <Footer />
 </v-app>
 </template>
 
 <script>
+import Footer from '../components/Organisms/Footer.vue'
 import Header from '../components/Organisms/Header.vue'
 export default {
-  components: { Header },
+  components: { Header, Footer },
 }
 </script>
