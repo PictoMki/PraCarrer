@@ -1,5 +1,6 @@
 <template>
-  <v-container>
+  <v-container
+    class="ma-12">
     <v-row>
       <v-col>
       </v-col>

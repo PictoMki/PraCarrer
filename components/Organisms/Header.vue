@@ -16,10 +16,11 @@
     </v-app-bar-nav-icon>
     <v-appbar-title
       class="ml-4">
-      <h2 class="primary--text font-weight-midium">PraCareer</h2>
+      <h2 class="primary--text font-weight-regular">PraCareer</h2>
     </v-appbar-title>
     <v-spacer />
     <label
+      class="font-weight-medium"
       @click="search">面接者を探す</label>
     <v-icon
       large
@@ -30,7 +31,7 @@
       width="48"
       color="primary"
       outlined
-      elevation="0"
+      elevation="1"
       fab></v-btn>
   </v-app-bar>
 </div>
