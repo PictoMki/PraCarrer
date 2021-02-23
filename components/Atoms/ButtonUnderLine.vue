@@ -3,6 +3,7 @@
     <v-btn
       color="white"
       elevation="0"
+      :width="width"
     >
       {{ title }}
     </v-btn>
@@ -22,6 +23,10 @@ export default {
     color: {
       type: String,
       default: 'primary'
+    },
+    width: {
+      type: Number,
+      default: 120
     }
   }
 }

@@ -4,6 +4,7 @@
   >
     <v-btn
       :color="color"
+      :width="width"
       outlined
       shaped
     >
@@ -23,14 +24,9 @@ export default {
       type: String,
       default: 'primary'
     },
-    clickBtn: {
-      type: Function,
-      default: () => {}
-    }
-  },
-  methods: {
-    click () {
-      this.clickBtn()
+    width: {
+      type: Number,
+      default: 200
     }
   }
 }

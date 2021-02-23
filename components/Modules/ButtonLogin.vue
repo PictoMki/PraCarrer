@@ -14,10 +14,43 @@
       </div>
     </template>
 
-    <v-card>
-      <v-card-title class="headline">
-        ログイン
-      </v-card-title>
+    <v-card
+      class="pa-4"
+      color="primary"
+    >
+      <v-row
+        class="white flex-column pa-8"
+      >
+        <v-col class="text-center">
+          <h2>ログイン</h2>
+          <label>メールアドレスまたはGoogleアカウントでログインする</label>
+        </v-col>
+        <v-col class="mt-4">
+          <h4>メールアドレス</h4>
+          <v-text-field
+            outlined
+            clearable
+          />
+        </v-col>
+        <v-col>
+          <h4>パスワード</h4>
+          <v-text-field
+            outlined
+            clearable
+          />
+        </v-col>
+        <v-col class="text-center">
+          <ButtonOutlined
+            title="ログイン"
+          />
+        </v-col>
+        <v-col class="text-center">
+          <ButtonOutlined
+            title="Googleでログイン"
+            color="grey"
+          />
+        </v-col>
+      </v-row>
     </v-card>
   </v-dialog>
 </template>
