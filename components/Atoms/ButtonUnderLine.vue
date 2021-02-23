@@ -1,15 +1,15 @@
 <template>
-  <div
-    @click="click"
-  >
+  <v-container>
     <v-btn
-      :color="color"
-      outlined
-      shaped
+      color="white"
+      elevation="0"
     >
       {{ title }}
     </v-btn>
-  </div>
+    <v-divider
+      :color="color"
+    />
+  </v-container>
 </template>
 
 <script>
@@ -22,15 +22,6 @@ export default {
     color: {
       type: String,
       default: 'primary'
-    },
-    clickBtn: {
-      type: Function,
-      default: () => {}
-    }
-  },
-  methods: {
-    click () {
-      this.clickBtn()
     }
   }
 }

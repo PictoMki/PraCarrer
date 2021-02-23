@@ -24,31 +24,17 @@
         </h2>
       </v-appbar-title>
       <v-spacer />
-      <label
-        class="font-weight-medium"
-        @click="search"
-      >面接者を探す</label>
-      <v-icon
-        large
-        class="mx-8"
-        @click="notice"
-      >
-        mdi-bell-outline
-      </v-icon>
-      <v-btn
-        height="48"
-        width="48"
-        color="primary"
-        outlined
-        elevation="1"
-        fab
-      />
+      <button-sign-up />
+      <button-login />
     </v-app-bar>
   </div>
 </template>
 
 <script>
+import ButtonLogin from '../Modules/ButtonLogin.vue'
+import ButtonSignUp from '../Modules/ButtonSignUp .vue'
 export default {
+  components: { ButtonLogin, ButtonSignUp },
   methods: {
     toTop () {
       this.$router.push('/')

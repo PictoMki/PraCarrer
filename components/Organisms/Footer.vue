@@ -1,33 +1,42 @@
-<template> 
+<template>
   <div>
-  <v-footer
-    class="py-8"
-    color="primary">
-    <v-row
-      class="mx-auto"
-      justify="center"
-      align-content="center">
+    <v-footer
+      class="py-8"
+      color="primary"
+    >
+      <v-row
+        class="mx-auto"
+        justify="center"
+        align-content="center"
+      >
         <v-col
           class="mb-12"
-          cols="8">
-            <h1 class="font-weight-light my-8">PraCareer</h1>
-            <v-row
-              class="mt-12">
-                <div
-                  v-for="item in fotters" 
-                  :key="item">
-                      <label
-                        class="mx-12"
-                        @click="transition(item)">{{ item.title }}
-                      </label>
-                      <v-divider
-                        :color="item.borderColor"
-                        vertical/>
-                </div>
-            </v-row>
+          cols="8"
+        >
+          <h1 class="font-weight-light my-8">
+            PraCareer
+          </h1>
+          <v-row
+            class="mt-12"
+          >
+            <div
+              v-for="item in fotters"
+              :key="item"
+            >
+              <label
+                class="mx-12"
+                @click="transition(item)"
+              >{{ item.title }}
+              </label>
+              <v-divider
+                :color="item.borderColor"
+                vertical
+              />
+            </div>
+          </v-row>
         </v-col>
-    </v-row>
-  </v-footer>
+      </v-row>
+    </v-footer>
   </div>
 </template>
 
@@ -66,7 +75,7 @@ export default {
     search () {
       return alert('search')
     },
-    notice() {
+    notice () {
       return alert('noti')
     },
     transition (data) {
