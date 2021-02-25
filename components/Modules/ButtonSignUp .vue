@@ -21,33 +21,16 @@
       <v-row
         class="white flex-column pa-8"
       >
-        <v-col class="text-center">
+        <v-col class="text-center mb-8">
           <h2>新規登録</h2>
           <label>メールアドレスまたはGoogleアカウントで新規登録する</label>
         </v-col>
-        <v-col class="mt-4">
-          <h4>メールアドレス</h4>
-          <v-text-field
-            outlined
-            clearable
-          />
-        </v-col>
-        <v-col>
-          <h4>ユーザー名</h4>
-          <v-text-field
-            outlined
-            clearable
-          />
-        </v-col>
-        <v-col>
-          <h4>パスワード</h4>
-          <v-text-field
-            outlined
-            clearable
-          />
-        </v-col>
-        <v-col>
-          <h4>パスワード（確認用）</h4>
+        <v-col
+          v-for="(item, key) in items"
+          :key="key"
+          class="pa-0"
+        >
+          <h4>{{ item.title }}</h4>
           <v-text-field
             outlined
             clearable
@@ -62,6 +45,7 @@
           <ButtonOutlined
             title="Googleで新規登録"
             color="grey"
+            icon="mdi-google"
           />
         </v-col>
       </v-row>
@@ -73,7 +57,21 @@
 export default {
   data () {
     return {
-      dialog: false
+      dialog: false,
+      items: [
+        {
+          title: 'メールアドレス'
+        },
+        {
+          title: 'ユーザー名'
+        },
+        {
+          title: 'パスワード'
+        },
+        {
+          title: 'パスワード確認用'
+        }
+      ]
     }
   },
   methods: {

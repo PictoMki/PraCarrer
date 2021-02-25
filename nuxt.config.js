@@ -2,81 +2,81 @@ const envPath = `configFile/.env.${process.env.NODE_ENV || 'development'}`
 require('dotenv').config({ path: envPath })
 
 export default {
-	// Global page headers: https://go.nuxtjs.dev/config-head
-	head: {
-		title: 'PraCareer',
-		meta: [
-			{ charset: 'utf-8' },
-			{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
-			{ hid: 'description', name: 'description', content: '' },
-		],
-		link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
-	},
+  // Global page headers: https://go.nuxtjs.dev/config-head
+  head: {
+    title: 'PraCareer',
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'description', name: 'description', content: '' }
+    ],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+  },
 
-	// Global CSS: https://go.nuxtjs.dev/config-css
+  // Global CSS: https://go.nuxtjs.dev/config-css
 
-	// Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-	plugins: [],
+  // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
+  plugins: [],
 
-	// Auto import components: https://go.nuxtjs.dev/config-components
-	components: true,
+  // Auto import components: https://go.nuxtjs.dev/config-components
+  components: true,
 
-	// Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
-	buildModules: [
-		// https://go.nuxtjs.dev/eslint
-		'@nuxtjs/eslint-module',
-		// https://go.nuxtjs.dev/stylelint
-		'@nuxtjs/stylelint-module',
-	],
+  // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
+  buildModules: [
+    // https://go.nuxtjs.dev/eslint
+    '@nuxtjs/eslint-module',
+    // https://go.nuxtjs.dev/stylelint
+    '@nuxtjs/stylelint-module'
+  ],
 
-	// Modules: https://go.nuxtjs.dev/config-modules
-	modules: [
-		// firebase環境分け
-		'@nuxtjs/dotenv',
-		// https://go.nuxtjs.dev/axios
-		'@nuxtjs/axios',
-		// https://go.nuxtjs.dev/pwa
-		'@nuxtjs/pwa',
-		// https://go.nuxtjs.dev/content
-    
-		'@nuxtjs/vuetify',
-		'@nuxt/content',
-	],
+  // Modules: https://go.nuxtjs.dev/config-modules
+  modules: [
+    // firebase環境分け
+    '@nuxtjs/dotenv',
+    // https://go.nuxtjs.dev/axios
+    '@nuxtjs/axios',
+    // https://go.nuxtjs.dev/pwa
+    '@nuxtjs/pwa',
+    // https://go.nuxtjs.dev/content
 
-	// Axios module configuration: https://go.nuxtjs.dev/config-axios
-	axios: {},
+    '@nuxtjs/vuetify',
+    '@nuxt/content'
+  ],
 
-	// PWA module configuration: https://go.nuxtjs.dev/pwa
-	pwa: {
-		manifest: {
-			lang: 'en',
-		},
-	},
+  // Axios module configuration: https://go.nuxtjs.dev/config-axios
+  axios: {},
 
-	// Content module configuration: https://go.nuxtjs.dev/config-content
-	content: {},
+  // PWA module configuration: https://go.nuxtjs.dev/pwa
+  pwa: {
+    manifest: {
+      lang: 'en'
+    }
+  },
 
-	// Build Configuration: https://go.nuxtjs.dev/config-build
-	build: {},
+  // Content module configuration: https://go.nuxtjs.dev/config-content
+  content: {},
 
-	env: {
-		NODE_ENV: process.env.NODE_ENV
-	},
+  // Build Configuration: https://go.nuxtjs.dev/config-build
+  build: {},
 
-	dotenv: {
-		filename: envPath
-	},
+  env: {
+    NODE_ENV: process.env.NODE_ENV
+  },
 
-	vuetify: {
-		theme: {
-			light: true,
-			themes: {
-				light: {
-					primary: '#E1E5A7',
-				}
-			}
-		}
-	},
+  dotenv: {
+    filename: envPath
+  },
+
+  vuetify: {
+    theme: {
+      light: true,
+      themes: {
+        light: {
+          primary: '#E1E5A7'
+        }
+      }
+    }
+  }
 }
 
 /*

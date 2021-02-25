@@ -7,22 +7,16 @@
       elevation="0"
     >
       <v-app-bar-nav-icon>
-        <v-img
-          class="ma-0 pa-0"
-          height="48"
-          width="48"
-          contain
-          src="/icon.png"
+        <app-icon
           @click="toTop"
         />
       </v-app-bar-nav-icon>
       <v-appbar-title
         class="ml-4"
-      >
-        <h2 class="primary--text font-weight-regular">
-          PraCareer
-        </h2>
-      </v-appbar-title>
+      />
+      <app-header-title
+        @click="toTop"
+      />
       <v-spacer />
       <label
         class="font-weight-medium"
@@ -48,7 +42,10 @@
 </template>
 
 <script>
+import AppHeaderTitle from '../Atoms/AppHeaderTitle.vue'
+import AppIcon from '../Atoms/AppIcon.vue'
 export default {
+  components: { AppIcon, AppHeaderTitle },
   methods: {
     toTop () {
       this.$router.push('/')

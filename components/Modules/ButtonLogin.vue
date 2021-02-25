@@ -4,9 +4,9 @@
     width="500"
     @close="close"
   >
-    <template #activator="{}">
+    <template #activator="">
       <div
-        @click="signIn"
+        @click="show"
       >
         <button-under-line
           title="ログイン"
@@ -21,25 +21,28 @@
       <v-row
         class="white flex-column pa-8"
       >
-        <v-col class="text-center">
+        <v-col class="text-center pa-0">
           <h2>ログイン</h2>
           <label>メールアドレスまたはGoogleアカウントでログインする</label>
         </v-col>
-        <v-col class="mt-4">
+        <v-col class="pa-0 mt-8">
           <h4>メールアドレス</h4>
           <v-text-field
             outlined
             clearable
           />
         </v-col>
-        <v-col>
+        <v-col class="pa-0">
           <h4>パスワード</h4>
           <v-text-field
             outlined
             clearable
           />
         </v-col>
-        <v-col class="text-center">
+        <v-col
+          class="text-center"
+          @click="signIn"
+        >
           <ButtonOutlined
             title="ログイン"
           />
@@ -63,8 +66,12 @@ export default {
     }
   },
   methods: {
-    signIn () {
+    show () {
       this.dialog = true
+    },
+    signIn () {
+      this.dialog = false
+      this.$router.push('/plans')
     },
     close () {
       this.dialog = false

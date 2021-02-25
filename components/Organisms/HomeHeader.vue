@@ -7,21 +7,20 @@
       elevation="0"
     >
       <v-app-bar-nav-icon>
-        <v-img
-          class="ma-0 pa-0"
-          height="48"
-          width="48"
-          contain
-          src="/icon.png"
+        <div
           @click="toTop"
-        />
+        >
+          <app-icon />
+        </div>
       </v-app-bar-nav-icon>
       <v-appbar-title
         class="ml-4"
       >
-        <h2 class="primary--text font-weight-regular">
-          PraCareer
-        </h2>
+        <div
+          @click="toTop"
+        >
+          <app-header-title />
+        </div>
       </v-appbar-title>
       <v-spacer />
       <button-sign-up />
@@ -31,10 +30,12 @@
 </template>
 
 <script>
+import AppHeaderTitle from '../Atoms/AppHeaderTitle.vue'
+import AppIcon from '../Atoms/AppIcon.vue'
 import ButtonLogin from '../Modules/ButtonLogin.vue'
 import ButtonSignUp from '../Modules/ButtonSignUp .vue'
 export default {
-  components: { ButtonLogin, ButtonSignUp },
+  components: { ButtonLogin, ButtonSignUp, AppIcon, AppHeaderTitle },
   methods: {
     toTop () {
       this.$router.push('/')

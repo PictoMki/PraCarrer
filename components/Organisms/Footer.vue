@@ -5,7 +5,6 @@
       color="primary"
     >
       <v-row
-        class="mx-auto"
         justify="center"
         align-content="center"
       >
@@ -20,8 +19,8 @@
             class="mt-12"
           >
             <div
-              v-for="item in fotters"
-              :key="item"
+              v-for="(item, index) in fotters"
+              :key="index"
             >
               <label
                 class="mx-12"
@@ -29,7 +28,8 @@
               >{{ item.title }}
               </label>
               <v-divider
-                :color="item.borderColor"
+                v-if="item.visible"
+                color="black"
                 vertical
               />
             </div>
@@ -48,22 +48,22 @@ export default {
         {
           title: 'お問い合わせ',
           url: '/',
-          borderColor: 'black'
+          visible: true
         },
         {
           title: '利用規約',
           url: '/',
-          borderColor: 'black'
+          visible: true
         },
         {
           title: 'プライバシーポリシー',
           url: '/',
-          borderColor: 'black'
+          visible: true
         },
         {
           title: '運営者',
           url: '/',
-          borderColor: 'white'
+          visible: false
         }
       ]
     }
