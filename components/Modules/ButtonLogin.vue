@@ -10,11 +10,9 @@
       >
         <button-under-line
           title="ログイン"
-          border-color="primary"
         />
       </div>
     </template>
-
     <v-card
       class="pa-4"
       color="primary"

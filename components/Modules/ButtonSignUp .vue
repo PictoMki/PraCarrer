@@ -1,16 +1,15 @@
 <template>
   <v-dialog
     v-model="dialog"
-    width="500"
+    width="600"
     @close="close"
   >
-    <template #activator="{}">
+    <template #activator="">
       <div
         @click="signUp"
       >
         <button-under-line
           title="新規登録"
-          border-color="primary"
         />
       </div>
     </template>
@@ -55,7 +54,7 @@
 </template>
 
 <script>
-import ButtonUnderLine from '../Atoms/ButtonUnderLine.vue'
+import ButtonUnderLine from '../Atoms/button/ButtonUnderLine.vue'
 export default {
   components: { ButtonUnderLine },
   data () {

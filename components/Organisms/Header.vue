@@ -44,8 +44,8 @@
 </template>
 
 <script>
-import AppHeaderTitle from '../Atoms/AppHeaderTitle.vue'
-import AppIcon from '../Atoms/AppIcon.vue'
+import AppHeaderTitle from '../Atoms/header/AppHeaderTitle.vue'
+import AppIcon from '../Atoms/header/AppIcon.vue'
 export default {
   components: { AppIcon, AppHeaderTitle },
   methods: {

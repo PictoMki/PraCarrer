@@ -1,9 +1,6 @@
 <template>
-  <v-container
-    :style="backgroundColor"
-  >
+  <v-container>
     <v-btn
-      class="mb-1"
       tile
       color="white"
       elevation="0"
@@ -11,6 +8,12 @@
     >
       {{ title }}
     </v-btn>
+    <v-sparkline
+      :color="borderColor"
+      class="mt-n6"
+      line-width="8"
+      :value="value"
+    />
   </v-container>
 </template>
 
@@ -23,7 +26,7 @@ export default {
     },
     borderColor: {
       type: String,
-      default: ''
+      default: 'primary'
     },
     width: {
       type: Number,
@@ -32,10 +35,7 @@ export default {
   },
   data () {
     return {
-      backgroundColor: {
-        background: this.borderColor,
-        padding: 0
-      }
+      value: [0, 0]
     }
   }
 }

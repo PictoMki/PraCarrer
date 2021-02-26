@@ -30,8 +30,8 @@
 </template>
 
 <script>
-import AppHeaderTitle from '../Atoms/AppHeaderTitle.vue'
-import AppIcon from '../Atoms/AppIcon.vue'
+import AppHeaderTitle from '../Atoms/header/AppHeaderTitle.vue'
+import AppIcon from '../Atoms/header/AppIcon.vue'
 import ButtonLogin from '../Modules/ButtonLogin.vue'
 import ButtonSignUp from '../Modules/ButtonSignUp .vue'
 export default {
