@@ -32,8 +32,8 @@
 <script>
 import AppHeaderTitle from '../Atoms/header/AppHeaderTitle.vue'
 import AppIcon from '../Atoms/header/AppIcon.vue'
-import ButtonLogin from '../Modules/ButtonLogin.vue'
-import ButtonSignUp from '../Modules/ButtonSignUp .vue'
+import ButtonLogin from '../Modules/auth/ButtonLogin.vue'
+import ButtonSignUp from '../Modules/auth/ButtonSignUp .vue'
 export default {
   components: { ButtonLogin, ButtonSignUp, AppIcon, AppHeaderTitle },
   methods: {

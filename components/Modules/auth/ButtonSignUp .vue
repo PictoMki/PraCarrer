@@ -37,12 +37,12 @@
           />
         </v-col>
         <v-col class="text-center">
-          <ButtonOutlined
+          <button-under-line
             title="新規登録する"
           />
         </v-col>
         <v-col class="text-center">
-          <ButtonOutlined
+          <button-under-line
             title="Googleで新規登録"
             color="grey"
             icon="mdi-google"
@@ -54,9 +54,7 @@
 </template>
 
 <script>
-import ButtonUnderLine from '../Atoms/button/ButtonUnderLine.vue'
 export default {
-  components: { ButtonUnderLine },
   data () {
     return {
       dialog: false,
