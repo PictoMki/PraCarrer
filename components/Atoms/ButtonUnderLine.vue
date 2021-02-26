@@ -1,15 +1,16 @@
 <template>
-  <v-container>
+  <v-container
+    :style="backgroundColor"
+  >
     <v-btn
+      class="mb-1"
+      tile
       color="white"
       elevation="0"
       :width="width"
     >
       {{ title }}
     </v-btn>
-    <v-divider
-      :color="color"
-    />
   </v-container>
 </template>
 
@@ -20,13 +21,21 @@ export default {
       type: String,
       default: ''
     },
-    color: {
+    borderColor: {
       type: String,
-      default: 'primary'
+      default: ''
     },
     width: {
       type: Number,
       default: 120
+    }
+  },
+  data () {
+    return {
+      backgroundColor: {
+        background: this.borderColor,
+        padding: 0
+      }
     }
   }
 }

@@ -10,6 +10,7 @@
       >
         <button-under-line
           title="ログイン"
+          border-color="primary"
         />
       </div>
     </template>

@@ -10,6 +10,7 @@
       >
         <button-under-line
           title="新規登録"
+          border-color="primary"
         />
       </div>
     </template>
@@ -54,7 +55,9 @@
 </template>
 
 <script>
+import ButtonUnderLine from '../Atoms/ButtonUnderLine.vue'
 export default {
+  components: { ButtonUnderLine },
   data () {
     return {
       dialog: false,

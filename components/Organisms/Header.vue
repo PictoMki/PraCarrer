@@ -7,9 +7,11 @@
       elevation="0"
     >
       <v-app-bar-nav-icon>
-        <app-icon
+        <div
           @click="toTop"
-        />
+        >
+          <app-icon />
+        </div>
       </v-app-bar-nav-icon>
       <v-appbar-title
         class="ml-4"

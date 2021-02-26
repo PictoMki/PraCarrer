@@ -6,7 +6,6 @@
     <label>
       {{ text }}
     </label>
-    <v-divider :width="width" :color="color" />
   </div>
 </template>
 

@@ -73,6 +73,9 @@ export default {
       themes: {
         light: {
           primary: '#E1E5A7'
+        },
+        dark: {
+          primary: '#E1E5A7'
         }
       }
     }
