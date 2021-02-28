@@ -1,6 +1,5 @@
 <template>
   <v-card
-    :loading="loading"
     class="mx-auto my-12"
     max-width="374">
     <template slot="progress">
@@ -55,13 +54,8 @@ export default {
   components: { CardTextBlock, CardSkillBlock, ReviewBlock },
   props: {
     name: {},
-    clickCard: {
-      type: Function
-    }
   },
   data: () => ({
-    loading: false,
-    selection: 1,
     skills: [
       {
         name: 'First',
@@ -87,16 +81,6 @@ export default {
     review: {
       value: 4.5
     }
-  }),
-  methods: {
-    reserve () {
-      this.loading = true
-      setTimeout(() => (this.loading = false), 2000)
-      
-    },
-    click() {
-      this.clickCard()
-    },
-  },
+  })
 }
 </script>

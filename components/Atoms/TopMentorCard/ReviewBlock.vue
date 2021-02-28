@@ -18,7 +18,7 @@
       <div class="ml-4">
         <button-outlined 
           title="レビューを見る"
-          :clickBtn="reserve" />
+          :clickBtn="tapReviewBtn" />
       </div>
     </v-row>
   </v-card-text>
@@ -28,6 +28,11 @@
 export default {
   props: {
     review: {},
-  }
+  },
+  methods: {
+    tapReviewBtn() {
+      alert('review')
+    }
+  },
 }
 </script>

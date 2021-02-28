@@ -14,7 +14,7 @@
         </v-carousel-item>
       </v-carousel>
       <v-col 
-        v-for="(item, i) in slides"
+        v-for="(item, i) in mentors"
         :key="i">
         <MentorCard 
         :name="item" />
@@ -30,14 +30,7 @@ export default {
   components: { MentorCard },
   data () {
     return {
-      colors: [
-        'indigo',
-        'warning',
-        'pink darken-2',
-        'red lighten-1',
-        'deep-purple accent-4',
-      ],
-      slides: [
+      mentors: [
         'First',
         'Second',
         'Third',
