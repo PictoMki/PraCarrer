@@ -1,19 +1,18 @@
 <template>
   <v-dialog
-    v-model="dialog"
+    v-model="isDisplayDialog"
     width="600"
     @close="close"
   >
-    <template #activator="">
+    <template #activator>
       <div
-        @click="signUp"
+        @click="show"
       >
         <button-under-line
           title="新規登録"
         />
       </div>
     </template>
-
     <v-card
       class="pa-4"
       color="primary"
@@ -37,12 +36,12 @@
           />
         </v-col>
         <v-col class="text-center">
-          <button-under-line
+          <button-outlined
             title="新規登録する"
           />
         </v-col>
         <v-col class="text-center">
-          <button-under-line
+          <button-outlined
             title="Googleで新規登録"
             color="grey"
             icon="mdi-google"
@@ -54,10 +53,12 @@
 </template>
 
 <script>
+import ButtonOutlined from '../../Atoms/button/ButtonOutlined.vue'
 export default {
+  components: { ButtonOutlined },
   data () {
     return {
-      dialog: false,
+      isDisplayDialog: false,
       items: [
         {
           title: 'メールアドレス'
@@ -75,11 +76,11 @@ export default {
     }
   },
   methods: {
-    signUp () {
-      this.dialog = true
+    show () {
+      this.isDisplayDialog = true
     },
     close () {
-      this.dialog = false
+      this.isDisplayDialog = false
     }
   }
 }

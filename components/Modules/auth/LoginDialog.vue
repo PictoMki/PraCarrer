@@ -1,10 +1,10 @@
 <template>
   <v-dialog
-    v-model="dialog"
-    width="500"
+    v-model="isDisplayDialog"
+    width="600"
     @close="close"
   >
-    <template #activator="">
+    <template #activator>
       <div
         @click="show"
       >
@@ -42,12 +42,12 @@
           class="text-center"
           @click="signIn"
         >
-          <ButtonOutlined
+          <button-outlined
             title="ログイン"
           />
         </v-col>
         <v-col class="text-center">
-          <ButtonOutlined
+          <button-outlined
             title="Googleでログイン"
             color="grey"
           />
@@ -61,19 +61,19 @@
 export default {
   data () {
     return {
-      dialog: false
+      isDisplayDialog: false
     }
   },
   methods: {
     show () {
-      this.dialog = true
+      this.isDisplayDialog = true
     },
     signIn () {
-      this.dialog = false
+      this.isDisplayDialog = false
       this.$router.push('/plans')
     },
     close () {
-      this.dialog = false
+      this.isDisplayDialog = false
     }
   }
 }

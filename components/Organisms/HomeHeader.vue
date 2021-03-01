@@ -23,8 +23,8 @@
         </div>
       </v-appbar-title>
       <v-spacer />
-      <button-sign-up />
-      <button-login />
+      <sign-up-dialog />
+      <login-dialog />
     </v-app-bar>
   </div>
 </template>
@@ -32,10 +32,11 @@
 <script>
 import AppHeaderTitle from '../Atoms/header/AppHeaderTitle.vue'
 import AppIcon from '../Atoms/header/AppIcon.vue'
-import ButtonLogin from '../Modules/auth/ButtonLogin.vue'
-import ButtonSignUp from '../Modules/auth/ButtonSignUp .vue'
+import LoginDialog from '../Modules/auth/LoginDialog.vue'
+import SignUpDialog from '../Modules/auth/SignUpDialog.vue'
+
 export default {
-  components: { ButtonLogin, ButtonSignUp, AppIcon, AppHeaderTitle },
+  components: { AppIcon, AppHeaderTitle, SignUpDialog, LoginDialog },
   methods: {
     toTop () {
       this.$router.push('/')

@@ -5,7 +5,7 @@
       :key="index"
       class="mb-12 mx-12"
     >
-      <plan-list
+      <plan
         :plan="plan"
       />
     </div>
@@ -13,9 +13,9 @@
 </template>
 
 <script>
-import PlanList from '../components/Organisms/PlanList.vue'
+import Plan from '../components/Organisms/Plan.vue'
 export default {
-  components: { PlanList },
+  components: { Plan },
   data () {
     return {
       plans: [
@@ -47,14 +47,6 @@ export default {
           remarks: '・ビデオツールのご希望があれば教えてください！\n・日程の変更は1回まで受け付けます！'
         }
       ]
-    }
-  },
-  methods: {
-    request () {
-      alert('request')
-    },
-    chat () {
-      alert('chat')
     }
   }
 }

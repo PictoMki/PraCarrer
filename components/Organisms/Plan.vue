@@ -70,6 +70,14 @@ export default {
       require: true,
       default: () => ({ plan: {} })
     }
+  },
+  methods: {
+    request () {
+      alert('request')
+    },
+    chat () {
+      alert('chat')
+    }
   }
 }
 </script>

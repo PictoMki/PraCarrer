@@ -19,7 +19,7 @@
             class="mt-12"
           >
             <div
-              v-for="(item, index) in fotters"
+              v-for="(item, index) in fotterMenus"
               :key="index"
             >
               <label
@@ -44,7 +44,7 @@
 export default {
   data () {
     return {
-      fotters: [
+      fotterMenus: [
         {
           title: 'お問い合わせ',
           url: '/',
