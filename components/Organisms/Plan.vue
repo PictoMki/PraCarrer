@@ -3,9 +3,11 @@
     <label
       class="font-weight-bold title"
     >
-      {{ plan.planType }}
+      {{ title }}
     </label>
     <v-card
+      v-for="(content, index) in contents"
+      :key="index"
       class="pa-4 mt-4"
       color="primary"
     >
@@ -14,30 +16,30 @@
       >
         <v-col>
           <label-under-line
-            :text="plan.title"
+            :text="content.title"
           />
           <label
             class="mx-4"
           >
-            {{ plan.price }}
+            {{ content.price }}
           </label>
           <label
             class="grey py-2 px-4 rounded"
           >
-            {{ plan.contractType }}
+            {{ content.contractType }}
           </label>
         </v-col>
         <plan-column
           title="プランの内容"
-          :detail="plan.content"
+          :detail="content.content"
         />
         <plan-column
           title="サポートの流れ"
-          :detail="plan.flow"
+          :detail="content.flow"
         />
         <plan-column
           title="備考"
-          :detail="plan.remarks"
+          :detail="content.remarks"
         />
         <v-card-actions class="mx-auto">
           <div
@@ -69,6 +71,12 @@ export default {
       type: Object,
       require: true,
       default: () => ({ plan: {} })
+    }
+  },
+  data () {
+    return {
+      title: this.plan.planTitle,
+      contents: this.plan.planContent
     }
   },
   methods: {

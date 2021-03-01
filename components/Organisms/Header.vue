@@ -8,7 +8,7 @@
     >
       <v-app-bar-nav-icon>
         <div
-          @click="toTop"
+          @click="pushToTopPage"
         >
           <app-icon />
         </div>
@@ -17,7 +17,7 @@
         class="ml-4"
       />
       <app-header-title
-        @click="toTop"
+        @click="pushToTopPage"
       />
       <v-spacer />
       <label
@@ -49,7 +49,7 @@ import AppIcon from '../Atoms/header/AppIcon.vue'
 export default {
   components: { AppIcon, AppHeaderTitle },
   methods: {
-    toTop () {
+    pushToTopPage () {
       this.$router.push('/')
     },
     search () {

@@ -24,7 +24,7 @@
             >
               <label
                 class="mx-12"
-                @click="transition(item)"
+                @click="pushToFotterMenusPage(item)"
               >{{ item.title }}
               </label>
               <v-divider
@@ -69,16 +69,13 @@ export default {
     }
   },
   methods: {
-    toTop () {
-      this.$router.push('/')
-    },
     search () {
       return alert('search')
     },
     notice () {
       return alert('noti')
     },
-    transition (data) {
+    pushToFotterMenusPage (data) {
       return this.$router.push(data.url)
     }
   }

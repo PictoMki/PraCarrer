@@ -4,8 +4,9 @@
     width="600"
     @close="close"
   >
-    <template #activator>
+    <template #activator="{ on }">
       <div
+        v-on="on"
         @click="show"
       >
         <button-under-line

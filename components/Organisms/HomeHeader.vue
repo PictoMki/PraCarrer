@@ -8,7 +8,7 @@
     >
       <v-app-bar-nav-icon>
         <div
-          @click="toTop"
+          @click="pushToTopPage"
         >
           <app-icon />
         </div>
@@ -17,7 +17,7 @@
         class="ml-4"
       >
         <div
-          @click="toTop"
+          @click="pushToTopPage"
         >
           <app-header-title />
         </div>
@@ -38,7 +38,7 @@ import SignUpDialog from '../Modules/auth/SignUpDialog.vue'
 export default {
   components: { AppIcon, AppHeaderTitle, SignUpDialog, LoginDialog },
   methods: {
-    toTop () {
+    pushToTopPage () {
       this.$router.push('/')
     },
     search () {
