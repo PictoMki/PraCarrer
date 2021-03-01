@@ -1,27 +1,19 @@
 <template>
-  <v-container>
-    <v-row>
-      <v-col>
-        <ButtonOutlined 
-          :title="msg"
-          :clickBtn="clickBtn" />
-      </v-col>
-    </v-row>
-  </v-container>
+  <v-container
+    class="ma-12"
+  />
 </template>
 
 <script>
-import ButtonOutlined from '../components/Atoms/ButtonOutlined.vue'
 
 export default {
-  components: { ButtonOutlined },
+  layout: 'home',
   data () {
     return {
-      msg: 'Hello world!!!',
     }
   },
   methods: {
-    clickBtn() {
+    clickBtn () {
       alert('click!!')
     }
   }

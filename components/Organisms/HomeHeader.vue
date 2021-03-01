@@ -15,30 +15,17 @@
       </v-app-bar-nav-icon>
       <v-appbar-title
         class="ml-4"
-      />
-      <app-header-title
-        @click="pushToTopPage"
-      />
-      <v-spacer />
-      <label
-        class="font-weight-medium"
-        @click="search"
-      >面接者を探す</label>
-      <v-icon
-        large
-        class="mx-8"
-        @click="notice"
       >
-        mdi-bell-outline
-      </v-icon>
-      <v-btn
-        height="48"
-        width="48"
-        color="primary"
-        outlined
-        elevation="1"
-        fab
-      />
+        <div
+          @click="pushToTopPage"
+        >
+          <app-header-title />
+        </div>
+      </v-appbar-title>
+      <v-spacer />
+      <sign-up-dialog />
+      <div class="mx-2" />
+      <login-dialog />
     </v-app-bar>
   </div>
 </template>
@@ -46,8 +33,11 @@
 <script>
 import AppHeaderTitle from '../Atoms/header/AppHeaderTitle.vue'
 import AppIcon from '../Atoms/header/AppIcon.vue'
+import LoginDialog from '../Modules/auth/LoginDialog.vue'
+import SignUpDialog from '../Modules/auth/SignUpDialog.vue'
+
 export default {
-  components: { AppIcon, AppHeaderTitle },
+  components: { AppIcon, AppHeaderTitle, SignUpDialog, LoginDialog },
   methods: {
     pushToTopPage () {
       this.$router.push('/')

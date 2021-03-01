@@ -1,15 +1,17 @@
 <template>
-<v-app>
-  <Header />
-  <div>
-    <nuxt />
-  </div>
-</v-app>
+  <v-app>
+    <Header />
+    <v-main>
+      <nuxt />
+    </v-main>
+    <Footer />
+  </v-app>
 </template>
 
 <script>
+import Footer from '../components/Organisms/Footer.vue'
 import Header from '../components/Organisms/Header.vue'
 export default {
-  components: { Header },
+  components: { Header, Footer }
 }
 </script>
