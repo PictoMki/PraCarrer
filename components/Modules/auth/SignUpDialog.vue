@@ -9,7 +9,7 @@
         v-on="on"
         @click="show"
       >
-        <button-under-line
+        <under-line-button
           title="新規登録"
         />
       </div>
@@ -37,12 +37,12 @@
           />
         </v-col>
         <v-col class="text-center">
-          <button-outlined
+          <outlined-button
             title="新規登録する"
           />
         </v-col>
         <v-col class="text-center">
-          <button-outlined
+          <outlined-button
             title="Googleで新規登録"
             color="grey"
             icon="mdi-google"
@@ -54,9 +54,10 @@
 </template>
 
 <script>
-import ButtonOutlined from '../../Atoms/button/ButtonOutlined.vue'
+import OutlinedButton from '../../Atoms/button/OutlinedButton.vue'
+import UnderLineButton from '../../Atoms/button/UnderLineButton.vue'
 export default {
-  components: { ButtonOutlined },
+  components: { OutlinedButton, UnderLineButton },
   data () {
     return {
       isDisplayDialog: false,

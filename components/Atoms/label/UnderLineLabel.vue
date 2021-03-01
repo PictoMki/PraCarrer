@@ -1,26 +1,23 @@
 <template>
-  <v-container>
-    <v-btn
-      tile
-      color="white"
-      elevation="0"
-      :width="width"
+  <div
+    class="d-inline-block"
+    :width="width"
+  >
+    <label class="pa-0 mx-4">
+      {{ text }}
+    </label>
+    <div
+      :class="borderColor"
     >
-      {{ title }}
-    </v-btn>
-    <v-sparkline
-      :color="borderColor"
-      class="mt-n6"
-      line-width="8"
-      :value="value"
-    />
-  </v-container>
+      <div class="pt-1" />
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
   props: {
-    title: {
+    text: {
       type: String,
       default: ''
     },
@@ -35,7 +32,6 @@ export default {
   },
   data () {
     return {
-      value: [0, 0]
     }
   }
 }

@@ -72,7 +72,8 @@ export default {
       light: true,
       themes: {
         light: {
-          primary: '#E1E5A7'
+          primary: '#E1E5A7',
+          surface: '#ffffff'
         },
         dark: {
           primary: '#E1E5A7'

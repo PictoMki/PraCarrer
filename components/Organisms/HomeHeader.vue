@@ -24,6 +24,7 @@
       </v-appbar-title>
       <v-spacer />
       <sign-up-dialog />
+      <div class="mx-2" />
       <login-dialog />
     </v-app-bar>
   </div>

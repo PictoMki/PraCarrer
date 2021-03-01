@@ -3,22 +3,26 @@
     class="d-inline-block"
     :width="width"
   >
-    <label class="pa-0 mx-4">
-      {{ text }}
-    </label>
-    <v-sparkline
-      :color="borderColor"
-      class="mt-n12 pa-0"
-      line-width="4"
-      :value="value"
-    />
+    <v-btn
+      tile
+      color="surface"
+      elevation="0"
+      :width="width"
+    >
+      {{ title }}
+    </v-btn>
+    <div
+      :class="borderColor"
+    >
+      <div class="pt-1" />
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    text: {
+    title: {
       type: String,
       default: ''
     },
@@ -33,7 +37,6 @@ export default {
   },
   data () {
     return {
-      value: [0, 0]
     }
   }
 }
