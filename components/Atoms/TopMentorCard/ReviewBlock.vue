@@ -34,8 +34,8 @@ export default {
   components: { OutlinedButton },
   props: {
     review: {
-      type: Number,
-      default: 0
+      type: Object,
+      default: () => {}
     }
   },
   methods: {
