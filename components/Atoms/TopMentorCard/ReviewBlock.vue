@@ -2,23 +2,26 @@
   <v-card-text>
     <v-row
       align="center"
-      class="mx-0">
+      class="mx-0"
+    >
       <v-rating
         :value="review.value"
         color="amber"
         dense
         half-increments
         readonly
-        size="18"></v-rating>
+        size="18"
+      />
 
       <div class="grey--text ml-4">
         {{ review.value }}
       </div>
 
       <div class="ml-4">
-        <outlined-button 
+        <outlined-button
           title="レビューを見る"
-          :clickBtn="tapReviewBtn" />
+          :click-btn="tapReviewBtn"
+        />
       </div>
     </v-row>
   </v-card-text>
@@ -30,12 +33,12 @@ import OutlinedButton from '../button/OutlinedButton.vue'
 export default {
   components: { OutlinedButton },
   props: {
-    review: {},
+    review: {}
   },
   methods: {
-    tapReviewBtn() {
+    tapReviewBtn () {
       alert('review')
     }
-  },
+  }
 }
 </script>

@@ -4,12 +4,14 @@
       {{ title }}
     </div>
     <v-row
-      class="ma-1 d-inline"
       v-for="(skill, i) in skills"
-      :key="i">
+      :key="i"
+      class="ma-1 d-inline"
+    >
       <v-chip
         :color="skill.color"
-        text-color="white">
+        text-color="white"
+      >
         {{ skill.name }}
       </v-chip>
     </v-row>
@@ -20,7 +22,7 @@
 export default {
   props: {
     title: {},
-    skills: {},
-  },
+    skills: {}
+  }
 }
 </script>
