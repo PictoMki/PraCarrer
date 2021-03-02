@@ -1,47 +1,53 @@
 <template>
   <v-card
     class="mx-auto mb-12"
-    max-width="374">
+    max-width="374"
+  >
     <template slot="progress">
       <v-progress-linear
         color="deep-purple"
         height="10"
-        indeterminate></v-progress-linear>
+        indeterminate
+      />
     </template>
 
     <v-img
       height="150"
-      src="https://cdn.vuetifyjs.com/images/cards/cooking.png"></v-img>
+      src="https://cdn.vuetifyjs.com/images/cards/cooking.png"
+    />
 
-    <v-row
-      class="ml-4 mt-4">
-      <v-avatar
-        size=60>
+    <v-row class="ml-4 mt-4">
+      <v-avatar size="60">
         <img
           src="https://cdn.vuetifyjs.com/images/john.jpg"
-          alt="John">
+          alt="John"
+        >
       </v-avatar>
       <v-card-title>{{ name }}</v-card-title>
-    </v-row>    
+    </v-row>
 
-    <review-block 
-      :review="review" />
+    <review-block
+      :review="review"
+    />
 
-    <card-skill-block 
+    <card-skill-block
       title="得意スキル"
-      :skills="skills" />
+      :skills="skills"
+    />
 
-    <v-divider class="mx-4"></v-divider>   
+    <v-divider class="mx-4" />
 
-    <card-text-block 
+    <card-text-block
       title="Mentorスコア"
-      content="15,643" />
+      content="15,643"
+    />
 
-    <v-divider class="mx-4"></v-divider>  
+    <v-divider class="mx-4" />
 
-    <card-text-block 
+    <card-text-block
       title="契約人数"
-      content="88人" />
+      content="88人"
+    />
   </v-card>
 </template>
 
@@ -53,7 +59,10 @@ import ReviewBlock from '../Atoms/TopMentorCard/ReviewBlock.vue'
 export default {
   components: { CardTextBlock, CardSkillBlock, ReviewBlock },
   props: {
-    name: {},
+    name: {
+      type: String,
+      default: ''
+    }
   },
   data: () => ({
     skills: [

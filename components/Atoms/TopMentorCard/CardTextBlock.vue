@@ -6,14 +6,20 @@
     <div class="title">
       {{ content }}
     </div>
-  </v-card-text> 
+  </v-card-text>
 </template>
 
 <script>
 export default {
   props: {
-    title: {},
-    content: {},
-  },
+    title: {
+      type: String,
+      default: ''
+    },
+    content: {
+      type: String,
+      default: ''
+    }
+  }
 }
 </script>
