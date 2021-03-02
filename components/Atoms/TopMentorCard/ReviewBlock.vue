@@ -16,7 +16,7 @@
       </div>
 
       <div class="ml-4">
-        <button-outlined 
+        <outlined-button 
           title="レビューを見る"
           :clickBtn="tapReviewBtn" />
       </div>
@@ -25,7 +25,10 @@
 </template>
 
 <script>
+import OutlinedButton from '../button/OutlinedButton.vue'
+
 export default {
+  components: { OutlinedButton },
   props: {
     review: {},
   },

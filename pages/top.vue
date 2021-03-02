@@ -4,10 +4,10 @@
       <v-col>
         <p class="text-h3 font-weight-bold yellow--text">自分の将来の<br>キャリアの師匠をみつけよう</p>
         <p class="text-body">就職や転職時の不安を<br>相談して後悔のないキャリアにしよう</p>
-        <button-outlined 
+        <outlined-button 
         class="ma-4"
         title="新規登録する"
-        :color="primary"
+        color="primary"
         :clickBtn="pushSignUpPage" />
       </v-col>
       <v-col>
@@ -47,11 +47,11 @@
 
 <script>
 import MentorCard from '../components/Organisms/TopMentorCard.vue'
-import ButtonOutlined from '../components/Atoms/ButtonOutlined.vue'
+import OutlinedButton from '../components/Atoms/button/OutlinedButton.vue'
 import TopImageColumn from '../components/Atoms/TopImageColumn.vue'
 
 export default {
-  components: { MentorCard, ButtonOutlined, TopImageColumn },
+  components: { MentorCard, OutlinedButton, TopImageColumn },
   data () {
     return {
       mentors: [
