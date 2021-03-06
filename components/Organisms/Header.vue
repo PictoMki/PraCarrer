@@ -3,22 +3,17 @@
     <v-app-bar
       class="px-4"
       color="white"
-      height="60"
+      height="80"
       elevation="0"
     >
       <v-app-bar-nav-icon>
         <div
+          class="ml-12"
           @click="pushToTopPage"
         >
           <app-icon />
         </div>
       </v-app-bar-nav-icon>
-      <v-appbar-title
-        class="ml-4"
-      />
-      <app-header-title
-        @click="pushToTopPage"
-      />
       <v-spacer />
       <label
         class="font-weight-medium"
@@ -44,10 +39,9 @@
 </template>
 
 <script>
-import AppHeaderTitle from '../Atoms/header/AppHeaderTitle.vue'
 import AppIcon from '../Atoms/header/AppIcon.vue'
 export default {
-  components: { AppIcon, AppHeaderTitle },
+  components: { AppIcon },
   methods: {
     pushToTopPage () {
       this.$router.push('/')

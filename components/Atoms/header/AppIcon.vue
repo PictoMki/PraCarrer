@@ -1,14 +1,19 @@
 <template>
   <v-img
-    class="ma-0 pa-0"
-    height="48"
-    width="48"
+    class="ml-16"
+    height="54"
+    width="250"
     contain
-    src="/icon.png"
+    :src="iconImage"
   />
 </template>
 
 <script>
 export default {
+  data () {
+    return {
+      iconImage: require('@/assets/images/top/image1.png')
+    }
+  }
 }
 </script>
