@@ -33,8 +33,8 @@
 <script>
 import AppHeaderTitle from '../Atoms/header/AppHeaderTitle.vue'
 import AppIcon from '../Atoms/header/AppIcon.vue'
-import LoginDialog from '../Modules/auth/LoginDialog.vue'
-import SignUpDialog from '../Modules/auth/SignUpDialog.vue'
+import LoginDialog from '../Modules/AuthDialogs/LoginDialog.vue'
+import SignUpDialog from '../Modules/AuthDialogs/SignUpDialog.vue'
 
 export default {
   components: { AppIcon, AppHeaderTitle, SignUpDialog, LoginDialog },
