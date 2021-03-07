@@ -65,7 +65,10 @@
 </template>
 
 <script>
+import PlanColumn from '../Modules/plan/PlanColumn'
+
 export default {
+  components: { PlanColumn },
   props: {
     plan: {
       type: Object,
