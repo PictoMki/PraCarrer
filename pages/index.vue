@@ -7,7 +7,7 @@
 <script>
 
 export default {
-  layout: 'home',
+  layout: 'homessss',
   data () {
     return {
     }
