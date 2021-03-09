@@ -39,6 +39,7 @@
         <v-col class="text-center">
           <outlined-button
             title="新規登録する"
+            @click="$emit => resist"
           />
         </v-col>
         <v-col class="text-center">
@@ -83,6 +84,9 @@ export default {
     },
     close () {
       this.isDisplayDialog = false
+    },
+    resist () {
+      alert('resist')
     }
   }
 }
