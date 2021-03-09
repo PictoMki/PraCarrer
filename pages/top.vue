@@ -1,6 +1,6 @@
 <template>
   <v-col>
-    <v-row class="pl-9 yellow lighten-5" style="height: 450px;" justify="center" align-content="center">
+    <v-row class="pl-9 yellow lighten-5 pt-16 pb-16" justify="center" align-content="center">
       <v-col>
         <p class="text-h3 font-weight-bold yellow--text">
           自分の将来の<br>キャリアの師匠をみつけよう
@@ -17,9 +17,9 @@
       </v-col>
       <v-col>
         <v-img
-          max-width="250"
-          max-height="150"
-          :src="imageColumns[0].src"
+          max-width="400"
+          max-height="400"
+          :src="titleImage"
         />
       </v-col>
     </v-row>
@@ -73,6 +73,7 @@ export default {
         'Third',
         'Fourth'
       ],
+      titleImage: require('@/assets/images/top/image0.png'),
       imageColumns: [
         {
           title: 'キャリアのメンターを探そう！',
@@ -92,7 +93,7 @@ export default {
       ],
       items: [
         {
-          src: require('@/assets/images/top/top1.png')
+          src: require('@/assets/images/top/image0.png')
         },
         {
           src: require('@/assets/images/top/top1.png')
